@@ -268,3 +268,19 @@ footer {
     color:#444;
   }
 }
+
+.ion {
+  font-size: 32px;
+}
+
+.fa {
+  color: #727272;
+  text-decoration:none;
+  padding: 0 4px 0 4px;
+}
+
+.ai {
+  color: #727272;
+  text-decoration:none;
+  padding: 0 4px 0 4px;
+}
