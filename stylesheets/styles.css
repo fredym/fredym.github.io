@@ -194,6 +194,38 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+
+
+.ion {
+  font-size: 32px;
+}
+
+.fa {
+  color: #727272;
+  text-decoration:none;
+  padding: 0 4px 0 4px;
+}
+
+.ai {
+  color: #727272;
+  text-decoration:none;
+  padding: 0 4px 0 4px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.social-bar {
+  margin-top: 1em;
+}
+
+.cv {
+  margin-top: 4em;
+}
+
+
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -230,6 +262,10 @@ footer {
 
   .avatar{
     display: none;
+  }
+
+  .cv {
+    margin-top: 1em;
   }
 }
 
@@ -271,28 +307,4 @@ footer {
     font-size:12pt;
     color:#444;
   }
-}
-
-.ion {
-  font-size: 32px;
-}
-
-.fa {
-  color: #727272;
-  text-decoration:none;
-  padding: 0 4px 0 4px;
-}
-
-.ai {
-  color: #727272;
-  text-decoration:none;
-  padding: 0 4px 0 4px;
-}
-
-.avatar {
-  border-radius: 50%;
-}
-
-.social-bar {
-  margin-top: 1em;
 }
