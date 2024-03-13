@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>pass</title>
+  <script>
+    async function calc(a, b) {
+      const m = new TextEncoder().encode(a + ':' + b);
+      const h = await crypto.subtle.digest("SHA-256", m);
+      const s = String.fromCharCode(...new Uint8Array(h));
+      return btoa(s).replaceAll('/', 'a');
+    }
+
+    async function generate() {
+      const a = document.getElementById('a').value;
+      const b = document.getElementById('b').value;
+      const r = await calc(a, b)
+      document.getElementById('o1').value = r.substring(0, 39);
+      document.getElementById('o2').value = r.substring(0, 29);
+      document.getElementById('ol').value = r.substring(0, 20);
+      document.getElementById('o3').value = r.substring(0, 19);
+      document.getElementById('o4').value = r.substring(0, 9);
+    }
+  </script>
+</head>
+
+<body>
+  <form onsubmit="generate(); return false;">
+    <input id="a" type="password"><br>
+    <input id="b"><br>
+    <input type="submit" value="Generate"><br>
+    <input id="o1" readonly><br>
+    <input id="o2" readonly><br>
+    <input id="ol" readonly><br>
+    <input id="o3" readonly><br>
+    <input id="o4" readonly>
+  </form>
+</body>
+
+</html>
