@@ -3,6 +3,46 @@
 
 <head>
   <title>pass</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    input, textarea, select {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
   <script>
     async function calc(a, b) {
       const m = new TextEncoder().encode(a + ':' + b);
@@ -26,14 +66,14 @@
 
 <body>
   <form onsubmit="generate(); return false;">
-    <input id="a" type="password"><br>
-    <input id="b"><br>
-    <input type="submit" value="Generate"><br><br>
-    <span id="o1"></span><br>
-    <span id="o2"></span><br>
-    <span id="o3"></span><br>
-    <span id="o4"></span><br>
-    <span id="ol"></span>
+    <input id="a" type="password">
+    <input id="b">
+    <button type="submit">Generate</button>
+    <label id="o1"></label>
+    <label id="o2"></label>
+    <label id="o3"></label>
+    <label id="o4"></label>
+    <label id="ol"></label>
   </form>
 </body>
 
