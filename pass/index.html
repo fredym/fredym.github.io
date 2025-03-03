@@ -8,7 +8,7 @@
       const m = new TextEncoder().encode(a + ':' + b);
       const h = await crypto.subtle.digest("SHA-256", m);
       const s = String.fromCharCode(...new Uint8Array(h));
-      return btoa(s).replaceAll('/', 'a');
+      return btoa(s).replaceAll('/', 'a').replaceAll('+', 'E');
     }
 
     async function generate() {
