@@ -15,11 +15,11 @@
       const a = document.getElementById('a').value;
       const b = document.getElementById('b').value;
       const r = await calc(a, b)
-      document.getElementById('o1').value = r.substring(0, 39);
-      document.getElementById('o2').value = r.substring(0, 29);
-      document.getElementById('o3').value = r.substring(0, 19);
-      document.getElementById('o4').value = r.substring(0, 9);
-      document.getElementById('ol').value = r.substring(0, 20);
+      document.getElementById('o1').innerText = r.substring(0, 39);
+      document.getElementById('o2').innerText = r.substring(0, 29);
+      document.getElementById('o3').innerText = r.substring(0, 19);
+      document.getElementById('o4').innerText = r.substring(0, 9);
+      document.getElementById('ol').innerText = r.substring(0, 20);
     }
   </script>
 </head>
@@ -28,12 +28,12 @@
   <form onsubmit="generate(); return false;">
     <input id="a" type="password"><br>
     <input id="b"><br>
-    <input type="submit" value="Generate"><br>
-    <input id="o1" readonly><br>
-    <input id="o2" readonly><br>
-    <input id="o3" readonly><br>
-    <input id="o4" readonly><br>
-    <input id="ol" readonly>
+    <input type="submit" value="Generate"><br><br>
+    <span id="o1"></span><br>
+    <span id="o2"></span><br>
+    <span id="o3"></span><br>
+    <span id="o4"></span><br>
+    <span id="ol"></span>
   </form>
 </body>
 
